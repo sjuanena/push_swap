@@ -15,13 +15,12 @@
 void	swap_swap(t_ptrs *ptr)
 {
 	int	i;
-	int	j;
 
 	i = ptr->head_a->next->content;
 	ptr->head_a->next->content = ptr->head_a->content;
 	ptr->head_a->content = i;
-	j = ptr->head_b->next->content;
+	i = ptr->head_b->next->content;
 	ptr->head_b->next->content = ptr->head_b->content;
-	ptr->head_b->content = j;
+	ptr->head_b->content = i;
 	write(1, "ss\n", 3);
 }

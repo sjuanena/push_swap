@@ -23,7 +23,7 @@ void	ft_sort_three(t_ptrs *ptr)
 	third = ft_lstcont(ptr->head_a, 2);
 	if (!ft_lstorder(ptr->head_a))
 		return ;
-	else if (first > second && second > third && third > second)
+	else if (first > second && second > third && third < second)
 	{
 		rotate_a(ptr);
 		swap_a(ptr);

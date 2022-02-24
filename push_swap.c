@@ -72,16 +72,8 @@ int	main(int argc, char **argv)
 		ft_some_args(&ptrs.head_a, argv, argc);
 	else if (argc == 2)
 		ft_one_arg(&ptrs.head_a, argv[1]);
-	else
-	{
-		write(1, "Error\n", 6);
-		return (1);
-	}
 	if (ft_dups(ptrs.head_a))
-	{
-		write(1, "Error\n", 6);
 		return (1);
-	}
 	if (ft_lstsize(ptrs.head_a) == 3)
 		ft_sort_three(&ptrs);
 	else if (ft_lstsize(ptrs.head_a) == 5)

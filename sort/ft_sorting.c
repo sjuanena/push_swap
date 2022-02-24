@@ -6,7 +6,7 @@
 /*   By: sjuanena <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 19:17:47 by sjuanena          #+#    #+#             */
-/*   Updated: 2022/02/17 19:11:56 by sjuanena         ###   ########.fr       */
+/*   Updated: 2022/02/24 18:48:27 by sjuanena         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	ft_sorting(t_ptrs *ptr)
 	int	this;
 
 	this = 0;
-	size = ft_lstorder(ptr->head_a);
+	size = ft_lstsize(ptr->head_a);
 	while ((ft_lstorder(ptr->head_a)
 			|| size != ft_lstsize(ptr->head_a)) || ptr->head_b != NULL)
 	{
@@ -103,7 +103,7 @@ int	ft_sorting(t_ptrs *ptr)
 				ft_second(ptr);
 			if (!ft_lstorder(ptr->head_a))
 				ft_lstzero(ptr->head_a);
-			if (!ft_lstorder(ptr->head_a))
+			if (ft_lstchunkorder(ptr->head_a, ptr->head_a->chunk))
 				ft_third(ptr);
 		}
 	}

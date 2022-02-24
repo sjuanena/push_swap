@@ -6,7 +6,7 @@
 #    By: sjuanena <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/31 19:30:14 by sjuanena          #+#    #+#              #
-#    Updated: 2022/02/17 19:15:00 by sjuanena         ###   ########.fr        #
+#    Updated: 2022/02/24 17:43:08 by sjuanena         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,15 +59,12 @@ all : $(NAME)
 
 $(NAME): $(SRCS)
 	@$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
-	@printf "\e[32mCompiled 🤠👌\e[0m\n"
 
 clean :
-	@$(RM) $(OBJS) libft/*.o
-	@printf "\e[33mDeleted all .o's 🗑️\e[0m\n"
+	@$(RM) $(OBJS)
 
 fclean : clean
-	@$(RM) $(NAME) libft.a 
-	@printf "\e[33m+ ratio 😡\e[0m\n"
+	@$(RM) $(NAME)
 
 re : fclean all
 

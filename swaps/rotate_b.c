@@ -19,7 +19,7 @@ void	rotate_b(t_ptrs *ptr)
 	ptr->first_b = ptr->head_b;
 	ptr->head_b = ptr->head_b->next;
 	ptr->first_b->next = NULL;
-	ptr->tail_b = ft_lstlast(ptr->head_a);
+	ptr->tail_b = ft_lstlast(ptr->head_b);
 	ptr->tail_b->next = ptr->first_b;
 	write(1, "rb\n", 3);
 }

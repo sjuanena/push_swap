@@ -14,19 +14,15 @@
 
 void	rotate_rotate(t_ptrs *ptr)
 {
-	if (ptr->head_a->next == NULL)
-		return ;
 	ptr->first_a = ptr->head_a;
 	ptr->head_a = ptr->head_a->next;
 	ptr->first_a->next = NULL;
-	ptr->tail_a = ft_lstlast(ptr->head_b);
+	ptr->tail_a = ft_lstlast(ptr->head_a);
 	ptr->tail_a->next = ptr->first_a;
-	if (ptr->head_b->next == NULL)
-		return ;
 	ptr->first_b = ptr->head_b;
 	ptr->head_b = ptr->head_b->next;
 	ptr->first_b->next = NULL;
-	ptr->tail_b = ft_lstlast(ptr->head_a);
+	ptr->tail_b = ft_lstlast(ptr->head_b);
 	ptr->tail_b->next = ptr->first_b;
 	write(1, "rr\n", 3);
 }
